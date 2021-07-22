@@ -1,7 +1,7 @@
 function init() {
-    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) body.innerHTML = "<center><h1>Damn</h1>\n<p>You're running this on phone. This is not phone compatible :(</p></center>"; else {
+    /*if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) body.innerHTML = "<center><h1>Damn</h1>\n<p>You're running this on phone. This is not phone compatible :(</p></center>"; else {
         // planning for other init code...
-    };
+    };*/
     document.addEventListener('contextmenu', event => event.preventDefault());
 
     $('img').on('dragstart', function(event) { 
