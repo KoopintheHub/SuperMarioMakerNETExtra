@@ -10,7 +10,7 @@ function init() {
 
     console.log("You can do some debug stuff to the proto :D");
 
-    loadThemeCookie();
+    if (getCookie("theme")) loadThemeCookie();
 }
 
 const sleepm = (milliseconds) => {
@@ -75,6 +75,22 @@ function tbEnable() {
     document.getElementById('titleBtn10').disabled = false;
     document.getElementById('titleBtn11').disabled = false;
     document.getElementById('titleBtn12').disabled = false;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+         while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 
